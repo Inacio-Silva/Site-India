@@ -86,9 +86,9 @@ main{
 }
 
 p{
+    font-family: sans-serif;
     margin-right: 25%;
     margin-left: 25%;
-    font-family: Arial, Helvetica, sans-serif;
     padding: 15px;
     justify-content: space-around;
     align-items: end;
@@ -98,26 +98,34 @@ p{
 
 .cards-section{
     display: flex;
-    justify-content: space-around;/*Distruibui os cards igualmente*/
+    justify-content: space-evenly;/*Distruibui os cards igualmente*/
+    gap: 20px; /*dar um pequeno espaco entre os cards*/
     margin-top: 40px;
-  
+    flex-wrap: wrap;
+   
 }
 
 .card {
+    height: 350px;
     width: 20%;
+    padding-bottom: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     border-radius: 10px;
     overflow: hidden; /*impede que o conteudo ultrapasse os limetes do card*/
     box-shadow: 0 16px 16px rgba(0, 0, 0, 0.1);/*adiciona sombra para dar profundidade*/
     background-color: whitesmoke;
-    padding: 25px;
+    padding: 15px;
     transition: transform 0.3s, box-shadow 0.3s, background-color 0.5s ease;/*efeito suave no hover*/
     
 }
 
 .card:hover{
     transform: translateY(-10px); /*faz o card "subir" um pouco*/
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 16px 16px rgba(0, 0, 0, 0.2);
     background-color: #3e7fa1;
 
 }
@@ -135,4 +143,10 @@ p{
 
 .card-content p{
     font-size: 14px;
+}
+
+.card a{
+    text-decoration:none;
+    display: block; /* Faz com que o link ocupe todo o espaço do card */
+    color:inherit; /*faz com que a cor do link nao mude ao ser clicado */
 }
