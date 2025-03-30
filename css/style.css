@@ -9,6 +9,18 @@
     -opentype(otf)
     -truetype(ttf)*/
 
+@keyframes slideDown{
+   0% { transform: translateY(-50px); /* Começa acima da posição inicial */
+    opacity: 0;
+}
+
+100% {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+}
+
 
 body{
     margin: 0;
@@ -17,9 +29,9 @@ body{
 }
 
 h1{
+    animation: slideDown 1s ease-out;
     font-family:'almost';
     font-size: 50px;
-    font-style: normal;
     text-align: center;
     color: whitesmoke;
  
@@ -53,7 +65,7 @@ nav{
    
 }
 
-section{
+main{
     background: url("../imgs/back2.jpg") no-repeat
     center center;/*center center para centralizar o eixo x e o eixo y */
     background-size: cover;/*caso a resolucao do monitor for mais q a da imagem*/
@@ -84,3 +96,43 @@ p{
     font-size: 30px;
 }
 
+.cards-section{
+    display: flex;
+    justify-content: space-around;/*Distruibui os cards igualmente*/
+    margin-top: 40px;
+  
+}
+
+.card {
+    width: 20%;
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden; /*impede que o conteudo ultrapasse os limetes do card*/
+    box-shadow: 0 16px 16px rgba(0, 0, 0, 0.1);/*adiciona sombra para dar profundidade*/
+    background-color: whitesmoke;
+    padding: 25px;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.5s ease;/*efeito suave no hover*/
+    
+}
+
+.card:hover{
+    transform: translateY(-10px); /*faz o card "subir" um pouco*/
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #3e7fa1;
+
+}
+
+.card i {
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.card-content h3{
+    font-size: 18px;
+    margin-bottom: 10px;
+
+}
+
+.card-content p{
+    font-size: 14px;
+}
