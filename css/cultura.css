@@ -14,6 +14,25 @@
     }
 }
 
+@keyframes appear{
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+
+}
+
+.block{
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
 
 body{
     margin: 0;
@@ -189,3 +208,6 @@ p{
     display: block; /* Faz com que o link ocupe todo o espaço do card */
     color:inherit; /*faz com que a cor do link nao mude ao ser clicado */
 }
+
+
+
